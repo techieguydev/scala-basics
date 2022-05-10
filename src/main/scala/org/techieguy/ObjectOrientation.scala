@@ -67,7 +67,13 @@ object ObjectOrientation extends App {
   Singleton.apply(10)
   Singleton(10) //equivalent to Singleton.apply(10)
 
-
+  object Animal { // companion objects
+    // When object and class has same name they are called companions
+    // Companions can access each other's private members of method/field
+    // Singleton Animal and instances are different
+    val canLiveInfinite = false
+  }
+  val animalCanLiveInfinite = Animal.canLiveInfinite
 
 
 }
