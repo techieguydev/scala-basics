@@ -50,4 +50,24 @@ object ObjectOrientation extends App {
   // operators in scala are actually methods
   val basicMath = 1 + 2
   val anotherBasicMath = 1.+(2) // equivalent to above line-51
+
+  // anonymous classes
+  val dinosaur = new Carnivore {
+    override def eat(animal: Animal): Unit = println("I'm dinosaur, I can eat anything")
+  }
+
+  // Singleton object
+  object Singleton {
+    val myVal = 12345
+    def myMethod() : Int = 43245
+
+    def apply(x: Int): Int = x + 1
+  }
+  Singleton.myMethod()
+  Singleton.apply(10)
+  Singleton(10) //equivalent to Singleton.apply(10)
+
+
+
+
 }
