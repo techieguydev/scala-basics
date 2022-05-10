@@ -47,5 +47,7 @@ object ObjectOrientation extends App {
   aLion eat aDog // infix notation = object method argument, only available for method with ONE argument
   aLion ?! "What if we could fly"
 
-
+  // operators in scala are actually methods
+  val basicMath = 1 + 2
+  val anotherBasicMath = 1.+(2) // equivalent to above line-51
 }
