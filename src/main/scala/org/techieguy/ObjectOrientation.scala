@@ -75,5 +75,16 @@ object ObjectOrientation extends App {
   }
   val animalCanLiveInfinite = Animal.canLiveInfinite
 
+  /*
+  * cases classes = lightweight data structure with some boilerplate code
+  * - generate sensible equals and hashcode
+  * - serialization
+  * - companion with apply method
+  * - used in pattern matching
+  * */
+  case class Person(name: String, age: Int)
+  val bob = Person.apply("Bob", 23)
+  val bobObject = Person("Bob", 23) // Equivalent to Person.apply("Bob", 23)
+
 
 }
