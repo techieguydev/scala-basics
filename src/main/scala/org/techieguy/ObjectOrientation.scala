@@ -108,5 +108,16 @@ object ObjectOrientation extends App {
   val head = aList.head
   val tail = aList.tail
 
+  // Two important points to note here
+  // Point #1: In Scala we usually operate with IMMUTABLE values/object
+  // Any modification to an object must return ANOTHER object
+  /*
+  * Benefits:
+  * 1 - Works as miracle in multithreaded/distributed environment
+  * 2 - Helps making sense of the code
+  * */
+  val reverseList = aList.reverse // returns a new object/list
+
+  // Point #2: Scala is closest to the OO ideal
 
 }
