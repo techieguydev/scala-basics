@@ -1,5 +1,7 @@
 package org.techieguy
 
+import scala.util.Try
+
 object ObjectOrientation extends App {
 
   // class and instance
@@ -85,6 +87,17 @@ object ObjectOrientation extends App {
   case class Person(name: String, age: Int)
   val bob = Person.apply("Bob", 23)
   val bobObject = Person("Bob", 23) // Equivalent to Person.apply("Bob", 23)
+
+  // Exception
+  try {
+    val x: String = null
+    x.length
+  } catch {
+    case e: Exception => "Some exception messages"
+  } finally {
+    // Executes no matter what
+  }
+
 
 
 }
