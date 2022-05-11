@@ -98,6 +98,15 @@ object ObjectOrientation extends App {
     // Executes no matter what
   }
 
+  // Generics in scala
+  abstract class MyList[T] {
+    def head(): T
+    def tail(): MyList[T]
+  }
+
+  val aList: List[Int] = List(1,2,3,4)  // List.apply(1,2,3,4)
+  val head = aList.head
+  val tail = aList.tail
 
 
 }
