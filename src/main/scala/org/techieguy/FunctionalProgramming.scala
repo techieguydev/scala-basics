@@ -51,7 +51,7 @@ object FunctionalProgramming extends App {
   val filteredList = List(1,2,3,4).filter(x => x <= 3)
   println(filteredList)
 
-  // All pairs between the number 1,2,3 and the letters a, b, c
+  // All pairs between the number 1,2,3 and the letters a, b, c - Chain of functions
   val allPairs = List(1,2,3).flatMap(number => List('a', 'b', 'c').map(letter => s"$number-$letter"))
   println(allPairs)
 
