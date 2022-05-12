@@ -66,12 +66,19 @@ object FunctionalProgramming extends App {
   * Collections
   * */
 
-  // list
+  // List
   val aList = List(1,2,3,4)
   val firstElement = aList.head
   val restElement = aList.tail
   val aPrependList = 0 :: aList // List(0,1,2,3,4)
   val anExtendedList = 0 +: aList :+ 5  // List(0,1,2,3,4,5)
+
+  // Sequence
+  val aSequence: Seq[Int] = Seq(1,2,3,4)  // Seq.apply(1,2,3,4)
+  val indexElement = aSequence(1) // aSequence.apply(1) -> 2
+
+  // Vector: fast Seq implementations
+  val aVector = Vector(1,2,3,4)
 
 
 }
