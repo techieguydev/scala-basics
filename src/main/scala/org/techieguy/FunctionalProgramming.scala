@@ -29,7 +29,7 @@ object FunctionalProgramming extends App {
 
   // Sugar syntax
   val doubler1: Int => Int = (x: Int) => x + 10
-  val doubler: Function1[Int, Int] = (x: Int) => x + 10 //Can be written as -> val doubler = (x: Int) => x.+(10)
+  val doubler: Function1[Int, Int] = (x: Int) => x + 10 //Can be written as -> val doubler = x => x.+(10)
   doubler(10) // Output: 20
 
   /*
@@ -39,5 +39,14 @@ object FunctionalProgramming extends App {
   *   override def apply(x: Int): Int = x + 10
   * }
   * */
+
+  // Higher Order Function: A method which takes functions as argument and returns functions as result
+  // Higher Order Function - HOF
+  val multiplier = List(1,2,3,4).map(x => x * 2)  // val multiplier = List(1,2,3,4).map(_ * 2)
+  println(multiplier)
+  val flatMapList = List(1,2,3).flatMap(x => List(x, x + 2))
+  println(flatMapList)
+
+
 
 }
