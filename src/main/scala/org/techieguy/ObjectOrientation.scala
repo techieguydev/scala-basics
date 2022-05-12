@@ -34,12 +34,12 @@ object ObjectOrientation extends App {
     def eat(animal: Animal): Unit
   }
 
-  trait Philoshopher {
+  trait Philosopher {
     def ?!(thought: String): Unit // valid method name
   }
 
   // single-class inheritance and multi-trait ("mixing")
-  class Lion extends Animal with Carnivore with Philoshopher {
+  class Lion extends Animal with Carnivore with Philosopher {
     override def eat(animal: Animal): Unit = println("I'm eating don't bother me!")
     override def ?!(thought: String): Unit = println(s"I was walking: $thought")
   }
