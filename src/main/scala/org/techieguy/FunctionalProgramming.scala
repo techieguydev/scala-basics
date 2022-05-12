@@ -86,5 +86,14 @@ object FunctionalProgramming extends App {
   val addedSet = aSet + 5 // Set(1,2,3,4,5)
   val removeSet = aSet - 2 // Set(1,3,4)
 
+  // ranges
+  val aRange = 1 to 1000
+  val twoByTwo = aRange.map(x => 2 * x).toList  // List(2,4,6,8,...2000)
+
+  // Tuple = groups of values under the same value
+  val aTuple = ("Bon", "Rock", 1234)
+
+  // Maps
+  val aPhoneBook: Map[String, Int] = Map(("Roman", 1234), ("Larssi" -> 3456))
 
 }
