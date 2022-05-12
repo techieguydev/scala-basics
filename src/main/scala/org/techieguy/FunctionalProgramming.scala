@@ -47,6 +47,8 @@ object FunctionalProgramming extends App {
   val flatMapList = List(1,2,3).flatMap(x => List(x, x + 2))
   println(flatMapList)
 
-
+  // Filters
+  val filteredList = List(1,2,3,4).filter(x => x <= 3)
+  println(filteredList)
 
 }
