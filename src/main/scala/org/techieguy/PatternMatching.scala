@@ -21,5 +21,19 @@ object PatternMatching extends App {
   }
   println(personGreeting)
 
+  // Tuple matching
+  val aTuple = ("Bob", "Rock")
+  val tupleMatching = aTuple match {
+    case (fname, lname) => s"Hi $fname $lname, welcome to Scala"
+    case _ => "Anything else"
+  }
+  println(tupleMatching)
 
+  // Decomposing List
+  val aList = List(1,2,3)
+  val aListMatching = aList match {
+    case List(_, 2, _) => "Number 2 founf in the middle"
+    case _ => "Something else"  // If we don't write anything else, we will get exception MatchError
+  }
+  println(aListMatching)
 }
