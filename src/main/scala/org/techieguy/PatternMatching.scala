@@ -11,4 +11,15 @@ object PatternMatching extends App {
     case _ => anInteger + "th"
   }
   println(order)
+
+  case class Person(name: String, age: Int)
+  val bob = Person("Bob", 44) // Person.apply("Bob", 44)
+
+  val personGreeting = bob match {
+    case Person(name, age) => s"Hi, I'm $name and I'm $age years old"
+    case _ => "Something else"
+  }
+  println(personGreeting)
+
+
 }
