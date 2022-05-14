@@ -1,5 +1,7 @@
 package org.techieguy
 
+import scala.util.Try
+
 object AdvancedScala extends App {
 
   // Lazy evaluation: Not evaluate until it's used for first time
@@ -21,6 +23,20 @@ object AdvancedScala extends App {
     case Some(value) => "Option got some values"
     case None => "Option got nothing"
   }
+
+  //
+  def methodCanThrowException(): String = throw new RuntimeException()
+  try {
+    methodCanThrowException()
+  } catch {
+    case e: Exception => "Devil caught, well done!"
+  }
+  // OR
+  val aTry = Try(methodCanThrowException())
+  // a try = "collection" with either a value if the code went well, or an exception if the code threw an exception
+  println(aTry.failed)  // Returns success if exception occurred
+  println(aTry.isFailure) // Returns true if exception occurred
+  println(aTry.isSuccess) // Returns false is exception occurred
 
 
 }
