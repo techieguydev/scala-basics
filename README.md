@@ -48,3 +48,8 @@ This is a readme file [Check this for formatting documentation](https://docs.git
 - [x] Task1
 - [] Task2
 - [] Task3
+- [] \(Optional)
+
+### Adding Emoji
+:grinning:
+
