@@ -53,3 +53,13 @@ This is a readme file [Check this for formatting documentation](https://docs.git
 ### Adding Emoji
 :grinning:
 
+```java
+class JavaClass {
+    public static void main(String[] args) {
+        System.out.println("In README file");
+    }
+}
+```
+```scala
+
+```
