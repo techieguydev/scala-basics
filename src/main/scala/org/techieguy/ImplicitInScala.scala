@@ -18,4 +18,7 @@ object ImplicitInScala extends App {
   println(23.isEven())  // new IntegerWrapper(23).isEven()
 
   //NOTE: use it carefully
+
+  val test = math floor(3.123) * 2
+  println(test)
 }
